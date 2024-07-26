@@ -2,7 +2,7 @@
 
 ## Idea
 URL Dispatcher is a Chrome extension that allows users to quickly send the current tab's URL to specified devices.
-Not all brower can send your browser's url include arc browser.
+Not all brower can send your browser's url so I made this.
 
 ## Preparation
 You need to install an app called "Push Notify API" - NotifyDroid beforehand. I recommend this app because over 10,000 people are using it. I don't know much about this app or if there is a version for iOS.
