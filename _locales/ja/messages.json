@@ -1,0 +1,37 @@
+{
+    "extensionName": {
+      "message": "ページ情報送信"
+    },
+    "extensionDescription": {
+      "message": "現在のページ情報をデバイスに送信します"
+    },
+    "device1Placeholder": {
+      "message": "デバイス1のキー"
+    },
+    "device2Placeholder": {
+      "message": "デバイス2のキー"
+    },
+    "sendButtonText": {
+      "message": "ページ情報送信"
+    },
+    "successMessage": {
+      "message": "全てのデバイスに送信成功"
+    },
+    "failureMessage": {
+      "message": "一部または全てのデバイスへの送信に失敗"
+    },
+    "urlMessage": {
+        "message": "送信されたURL: $URL$",
+        "placeholders": {
+          "url" : {
+            "content" : "$1"
+          }
+        }
+    },
+    "urlReceivedMessage": {
+        "message": "URLが送られてきました。"
+    },
+    "emptyDeviceKeyError": {
+        "message": "デバイスキーが空です"
+    }
+  }

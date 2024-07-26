@@ -1,0 +1,37 @@
+{
+    "extensionName": {
+      "message": "URL Dispatcher"
+    },
+    "extensionDescription": {
+      "message": "Send current page information to devices"
+    },
+    "device1Placeholder": {
+      "message": "Device 1 Key"
+    },
+    "device2Placeholder": {
+      "message": "Device 2 Key"
+    },
+    "sendButtonText": {
+      "message": "Send URL"
+    },
+    "successMessage": {
+      "message": "Successfully sent to all devices"
+    },
+    "failureMessage": {
+      "message": "Failed to send to some or all devices"
+    },
+    "urlMessage": {
+        "message": "sent URL: $URL$",
+        "placeholders": {
+          "url" : {
+            "content" : "$1"
+          }
+        }
+    },
+    "urlReceivedMessage": {
+        "message": "URL has been received."
+    },
+    "emptyDeviceKeyError": {
+        "message": "Device key is empty"
+    }
+}
