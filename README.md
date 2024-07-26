@@ -1,6 +1,17 @@
 # URL Dispatcher
 
+## Idea
 URL Dispatcher is a Chrome extension that allows users to quickly send the current tab's URL to specified devices.
+Not all brower can send your browser's url include arc browser.
+
+## Preparation
+You need to install an app called "Push Notify API" - NotifyDroid beforehand. I recommend this app because over 10,000 people are using it. I don't know much about this app or if there is a version for iOS.
+
+After installing the app on your phone, open it and try this command:
+
+```bash
+curl https://xdroid.net/api/message -X POST -d "k=your API KEY" -d "t=your title" -d "c=your message" -d "u=http://url you are sending"
+```
 
 ## Features
 
@@ -49,14 +60,13 @@ To modify the extension:
 2. If adding new user-facing strings, add them to both `messages.json` files.
 3. Reload the extension in `chrome://extensions/`.
 
-## Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## License
 
 [MIT License](LICENSE)
 
 ## Support
+No Support are available.
 
-If you encounter any problems or have any suggestions, please open an issue in this repository.
+## Finally 
+Please Check License Agreement of MIT, and use this extension on your risk. 
