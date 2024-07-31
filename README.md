@@ -1,5 +1,5 @@
 # URL Dispatcher
-
+![URL Dispacher](https://github.com/mkats4412/push-notification/blob/main/dispatcher.png)
 ## Idea
 URL Dispatcher is a Chrome extension that allows users to quickly send the current tab's URL to specified devices.
 Not all brower can send your browser's url so I made this.
