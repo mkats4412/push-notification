@@ -16,6 +16,7 @@ curl https://xdroid.net/api/message -X POST -d "k=your API KEY" -d "t=your title
 ## Features
 
 - Send the current tab's URL to up to two devices
+- Create QR code of current tab's URL 
 - Bilingual support (English and Japanese)
 - Custom alert dialogs for better user experience
 - Persistent device keys for convenience
