@@ -1,5 +1,6 @@
 # URL Dispatcher
 ![URL Dispacher](https://github.com/mkats4412/push-notification/blob/main/dispatcher.png)
+when you create qrcode
 <br>
 ![URL Dispacher](https://github.com/mkats4412/push-notification/blob/main/dispatcher_with_qrcode.png)
 ## Idea
