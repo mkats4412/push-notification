@@ -59,3 +59,28 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 });
+
+// QRコード生成ボタンのクリックイベント
+document.getElementById('createQR').addEventListener('click', () => {
+  const qrImage = document.getElementById('qr');
+  
+  // 現在のタブのURLを取得
+  chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
+    const url = tabs[0].url; // 現在のタブのURLを取得
+    const qrCodeUrl = `https://api.qrserver.com/v1/create-qr-code/?data=${encodeURIComponent(url)}`;
+
+    // QRコードの表示/非表示をトグル
+    if (qrImage.style.display === 'block') {
+      qrImage.style.display = 'none'; // 既に表示されている場合は非表示にする
+    } else {
+      qrImage.src = qrCodeUrl; // QRコードのURLを設定
+      qrImage.style.display = 'block'; // QRコードを表示する
+    }
+  });
+});
+
+
+// モーダルダイアログを閉じる処理
+document.querySelector('.close-button').addEventListener('click', () => {
+  document.getElementById('customAlert').style.display = 'none';
+});

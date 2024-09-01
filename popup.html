@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title data-i18n="extensionName"></title>
+  <title data-i18n="extensionName">Url Dispatcher</title>
   <style>
     body { 
       width: 300px; 
@@ -12,10 +12,15 @@
       width: 100%; 
       margin-top: 5px; 
     }
+    /* ボタンを左右に並べるためのスタイル */
+    .button-container {
+      display: flex;
+      justify-content: space-between; /* ボタンを左右に配置 */
+      margin-top: 10px; /* 上部のマージン */
+    }
     button {
-      width: 50%;
-      margin-top: 10px;
-      margin-bottom: 0px;
+      width: 48%; /* ボタンの幅を調整 */
+      margin-bottom: 0px; /* 下のマージンをリセット */
     }
     #header {
       display: flex;
@@ -32,6 +37,14 @@
       font-weight: bold;
     }
   
+    /* QRコード用のスタイル */
+    #qr {
+      margin-top: 10px;
+      display: none;
+      width: 100%; /* QRコードのサイズ */
+      height: auto; /* 高さを自動調整 */
+    }
+
     /* モーダルダイアログのスタイル */
     .modal {
       display: none;
@@ -77,10 +90,20 @@
     <img id="icon" src="icon32.png" alt="Extension Icon">
     <span id="title" data-i18n="extensionName"></span>
   </div>
-  <input type="text" id="device1" data-i18n-placeholder="device1Placeholder">
-  <input type="text" id="device2" data-i18n-placeholder="device2Placeholder">
-  <button id="sendButton" data-i18n="sendButtonText"></button>
+  <input type="text" id="device1" data-i18n-placeholder="device1Placeholder" placeholder="Device 1 URL">
+  <input type="text" id="device2" data-i18n-placeholder="device2Placeholder" placeholder="Device 2 URL">
   
+  <!-- ボタンを囲むコンテナ -->
+  <div class="button-container">
+    <!-- 既存の送信ボタン -->
+    <button id="sendButton" data-i18n="sendButtonText">Send URL</button>
+    
+    <!-- 新しいQRコード生成ボタン -->
+    <button id="createQR" data-i18n="createQRButtonText">Create QR Code</button>
+  </div>
+  
+  <!-- QRコード表示用の画像 -->
+  <img id="qr" alt="QR Code" />
 
   <!-- カスタムアラート用のモーダルダイアログ -->
   <div id="customAlert" class="modal">
