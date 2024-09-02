@@ -15,7 +15,7 @@
       "message": "Send URL"
     },
     "createQRButtonText":{
-      "message": "Create QR Code"
+      "message": "QR Code"
     },
     "successMessage": {
       "message": "Successfully sent to all devices"

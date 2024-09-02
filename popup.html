@@ -5,22 +5,29 @@
   <title data-i18n="extensionName">Url Dispatcher</title>
   <style>
     body { 
-      width: 300px; 
+      width: 200px; 
       padding: 10px; 
     }
     input { 
       width: 100%; 
-      margin-top: 5px; 
+      padding-left: 10%; /* 左右のパディングを調整 */
+      padding-right: 10%;
+      margin-top: 5px;
+      box-sizing: border-box; 
     }
-    /* ボタンを左右に並べるためのスタイル */
+    /* ボタンを中央に配置するためのスタイル */
     .button-container {
       display: flex;
-      justify-content: space-between; /* ボタンを左右に配置 */
+      justify-content: space-between; /* ボタンをスペースで均等に配置 */
       margin-top: 10px; /* 上部のマージン */
     }
     button {
-      width: 48%; /* ボタンの幅を調整 */
-      margin-bottom: 0px; /* 下のマージンをリセット */
+      width: 48%; /* ボタンの幅を48%に設定 */
+      margin-left: 0; /* 左ボタンのマージンをリセット */
+      margin-right: 0; /* 右ボタンのマージンをリセット */
+    }
+    #sendButton {
+      margin-left: 0; /* 左ボタンの位置を固定 */
     }
     #header {
       display: flex;
@@ -38,11 +45,15 @@
     }
   
     /* QRコード用のスタイル */
+    .qr-container {
+      display: flex; /* フレックスボックスを使用 */
+      justify-content: center; /* 中央に配置 */
+      margin-top: 10px; /* 上部のマージン */
+    }
     #qr {
-      margin-top: 10px;
-      display: none;
-      width: 100%; /* QRコードのサイズ */
+      width: 50%; /* QRコードの幅を90%に設定 */
       height: auto; /* 高さを自動調整 */
+      display: none; /* 初期は非表示 */
     }
 
     /* モーダルダイアログのスタイル */
@@ -102,8 +113,10 @@
     <button id="createQR" data-i18n="createQRButtonText">Create QR Code</button>
   </div>
   
-  <!-- QRコード表示用の画像 -->
-  <img id="qr" alt="QR Code" />
+  <!-- QRコード表示用のコンテナ -->
+  <div class="qr-container">
+    <img id="qr" alt="QR Code" />
+  </div>
 
   <!-- カスタムアラート用のモーダルダイアログ -->
   <div id="customAlert" class="modal">
